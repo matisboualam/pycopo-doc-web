@@ -432,7 +432,7 @@ document.write(`
 <li><p>Finally, our object we’ll define as our composite.</p></li>
 </ul>
 <blockquote>
-<div><p><strong>Warning</strong>
+<div><p><strong>ⓘ</strong>
 The geometry of the object needs to have plane faces on which we’ll stick our Aruco markers. This requirement is essential to the good detection of the markers!</p>
 </div></blockquote>
 </section>
@@ -471,14 +471,14 @@ The geometry of the object needs to have plane faces on which we’ll stick our 
 <section id="aruco-marker-detection">
 <h2>aruco_marker_detection<a class="headerlink" href="#aruco-marker-detection" title="Permalink to this heading">#</a></h2>
 <br>
-<p>Now that we are aware of the relation between the 2D and the 3D corresponding point, the first step of the pycopo process relies on retrieving the 2D coordinates of the object we want to track in the image plan. The strategy employed in our case is to detect .</p>
-<p>This step is executed using the <strong>aruco.detect_marker()</strong> function avaible in the opencv module which return the 2D coordinates of each corner from the marker detected and its id.</p>
+<p>Now that we are aware of the relation between the 2D and the 3D corresponding point, the first step of the pycopo process relies on retrieving the 2D coordinates of the object we want to track in the image plan. The strategy employed in our case is to detect every marker visible on an image and store the 2D corner’s coordinates associated as its id.</p>
+<p>This step is executed using the <strong>aruco.detect_marker()</strong> function avaible in the opencv module.</p>
 <br>
 <p align="center">
     <img src="_images/Aruco_marker_detection.JPG"  width="50%" height="60%">
 </p>
 <br>
-<p>Behind the function are hidding a succession of thresholding, contour detection and binary transcription which allow us to locate on the image and identify every marker present in the frame.</p>
+<p>Behind the function are hidding a succession of thresholding, contour detection and binary transcription which allow us to locate on the image and identify every aruco marker present in the frame.</p>
 <p align="right">
   <a href="https://docs.opencv.org/4.x/d5/dae/tutorial_aruco_detection.html" style="font-size: 15px;">to know more about aruco detection system</a>
 </p>
@@ -487,7 +487,7 @@ The geometry of the object needs to have plane faces on which we’ll stick our 
 <section id="pose-estimation">
 <span id="pose-estimation-target"></span><h2>pose_estimation<a class="headerlink" href="#pose-estimation" title="Permalink to this heading">#</a></h2>
 <br>
-<p>Once the marker corner’s 2D coordinate stored, we will define the 3D coordinates of the marker expressed in its own referential, based on the dimension of the marker.</p>
+<p>Once the marker corner’s 2D coordinate stored, we will define a new virtual square with the same dimension of the marker that we are simply going to translate on (Z) axis first. The corners of this virtual square is now expressed in 3D.</p>
 <p align="center">
   <img src="_images/3d_coord_corners.jpg" width="70%" height="70%">
 </p>
@@ -495,9 +495,9 @@ The geometry of the object needs to have plane faces on which we’ll stick our 
 <p align="center">
   <img src="_images/3d_coord_corners_3d_views.JPG" width="70%" height="70%">
 </p>
-<p>As the pose is caracterised by its transformation matrix [R|t], the goal here is to find the matching matrix which allow us the go from the 2D coord obtained with aruco.detectmarker() and the 3D coord defined just above.</p>
+<p>As the pose is characterised by its transformation matrix [R|t], the goal here is to find the matching matrix which allows us to go from the 4 virtual corners in 3D to the 4 reals corners in 2D from our marker obtained with the aruco.detectmarker() function.</p>
 <p>The strategy developped in pycopo’s module, initialize a first transformation matrix which allows us to project our 3D points towards their 2D expression.</p>
-<p>Then by comparison in regard to the 2D coordinates obtained with Aruco.detectmarker() function, we can decide weather yes or no the transformation matrix is correct. The transformation matrix optimization is applied using the <a class="reference external" href="https://fr.wikipedia.org/wiki/M%C3%A9thode_des_moindres_carr%C3%A9s">least square</a>.</p>
+<p>Then by comparison in regard to the 2D coordinates obtained with Aruco.detectmarker() function, we can decide whether yes or no the transformation matrix is correct. The transformation matrix optimization is applied using the <a class="reference external" href="https://fr.wikipedia.org/wiki/M%C3%A9thode_des_moindres_carr%C3%A9s">least square</a>.</p>
 <p>Here the results:</p>
 <p align="center">
   <img src="_images/repere_marker.JPG" width="50%">
