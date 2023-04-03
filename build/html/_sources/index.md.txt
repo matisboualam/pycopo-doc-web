@@ -82,8 +82,9 @@ tutorial.ipynb
 ```
 
 ```{seealso}
-- [gitlab repo](https://gitlab.com/symmehub/pycopo)
+- [GitLab repo](https://gitlab.com/symmehub/pycopo)
 - [SYMME website](https://www.univ-smb.fr/symme/)
+- [Github-Page](https://github.com/matisboualam/pycopo-doc-web)
 ```
 
 <div>

@@ -1,16 +1,29 @@
 (top_page-target)=
-# The theory behind pycopo modules
+# The theory behind Pycopo
+
+## the composite
+
+Before going any further, let's define what we will need to have in order to use pycopo:
+
+  + The whole process is based on the monocular vision, so obviously we will start with a camera.
+  + A set of Aruco markers big enough to be detected. The marker size depends on the average distance of work (sides of 15mm for a work distance of 75 cm seems to be a good starting point).
+  + Finally, our object we'll define as our composite. 
+  
+>**Warning**
+>The geometry of the object needs to have plane faces on which we'll stick our Aruco markers. This requirement is essential to the good detection of the markers! 
+
+
 ## pinhole_camera_model
 
 <br>
 
-**The pinhole_camera_model** modelise a camera by perspective projection. It transforms a 3D point expressed in its own referential into a 2D point expressed in the image plan.
+**The pinhole_camera_model** models a camera by perspective projection. It establish the link between the 3D point expressed in its own referential into a 2D point expressed in the image plan.
 
-The transformation is caracterised according to 2 types of parameters:
+The transformation is characterised according to 2 types of parameters:
 + The internal camera parameters, which are
-    * principal point offset.
-    + distortion coefficient from the lens.
-+ The external parameters which correspond to the rotation matrix and translation vector that rely the two referentials. These external parameters are the key to the pycopo.pose_estimate() function
+    * the principal point offset.
+    * the distortion coefficient from the lens.
++ The external parameters which correspond to the rotation matrix and translation vector that rely the two referentials. These external parameters are the key to the pose estimation function.
 
 <p align="center">
     <img src="_images/modèle_sténopé.jpg"  width="80%" height="80%">
@@ -41,7 +54,7 @@ ________________
 
 <br>
 
-Now that we are aware of the relation between the 2D and the 3D corresponding point, the first step of the pycopo process rely on retrieving the 2D coordinates of the object we want to track. In our case the aruco marker.  
+Now that we are aware of the relation between the 2D and the 3D corresponding point, the first step of the pycopo process relies on retrieving the 2D coordinates of the object we want to track in the image plan. The strategy employed in our case is to detect .
 
 This step is executed using the **aruco.detect_marker()** function avaible in the opencv module which return the 2D coordinates of each corner from the marker detected and its id.
 

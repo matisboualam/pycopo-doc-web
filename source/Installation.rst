@@ -5,7 +5,7 @@ Installation
 
 --------------------
 
-The **pycopo** module is execectubale in docker container because of it specific environment. 
+The pycopo module is execectubale in docker container because of it specific environment. 
     + First clone the project throught this gitlab link: 
 
     .. code-block:: console

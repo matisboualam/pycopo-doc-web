@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>The theory behind pycopo modules &#8212; pycopo 0.0.1 documentation</title>
+    <title>The theory behind Pycopo &#8212; pycopo 0.0.1 documentation</title>
   
   
   
@@ -46,7 +46,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Pycopo module dictionnary" href="modules.html" />
-    <link rel="prev" title="Usage" href="usage.html" />
+    <link rel="prev" title="Installation" href="Installation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -135,15 +135,15 @@
   <ul class="bd-navbar-elements navbar-nav">
     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="usage.html">
-                        Usage
+                      <a class="nav-link nav-internal" href="Installation.html">
+                        Installation
                       </a>
                     </li>
                 
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        The theory behind pycopo modules
+                        The theory behind Pycopo
                       </a>
                     </li>
                 
@@ -262,15 +262,15 @@ document.write(`
   <ul class="bd-navbar-elements navbar-nav">
     
                     <li class="nav-item">
-                      <a class="nav-link nav-internal" href="usage.html">
-                        Usage
+                      <a class="nav-link nav-internal" href="Installation.html">
+                        Installation
                       </a>
                     </li>
                 
 
                     <li class="nav-item current active">
                       <a class="nav-link nav-internal" href="#">
-                        The theory behind pycopo modules
+                        The theory behind Pycopo
                       </a>
                     </li>
                 
@@ -339,10 +339,11 @@ document.write(`
         <div class="sidebar-primary-item">
 <h3><a href="index.html">Table of Contents</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Installation.html">Installation</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">The theory behind pycopo modules</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">The theory behind Pycopo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#the-composite">the composite</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pinhole-camera-model">pinhole_camera_model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#aruco-marker-detection">aruco_marker_detection</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#pose-estimation">pose_estimation</a></li>
@@ -403,7 +404,7 @@ document.write(`
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page">The theory behind pycopo modules</li>
+    <li class="breadcrumb-item active" aria-current="page">The theory behind Pycopo</li>
   </ul>
 </nav>
 </div>
@@ -420,23 +421,34 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section id="the-theory-behind-pycopo-modules">
-<span id="top-page-target"></span><h1>The theory behind pycopo modules<a class="headerlink" href="#the-theory-behind-pycopo-modules" title="Permalink to this heading">#</a></h1>
+  <section id="the-theory-behind-pycopo">
+<span id="top-page-target"></span><h1>The theory behind Pycopo<a class="headerlink" href="#the-theory-behind-pycopo" title="Permalink to this heading">#</a></h1>
+<section id="the-composite">
+<h2>the composite<a class="headerlink" href="#the-composite" title="Permalink to this heading">#</a></h2>
+<p>Before going any further, let’s define what we will need to have in order to use pycopo:</p>
+<ul class="simple">
+<li><p>The whole process is based on the monocular vision, so obviously we will start with a camera.</p></li>
+<li><p>A set of Aruco markers big enough to be detected. The marker size depends on the average distance of work (sides of 15mm for a work distance of 75 cm seems to be a good starting point).</p></li>
+<li><p>Finally, our object we’ll define as our composite.</p></li>
+</ul>
+<blockquote>
+<div><p><strong>Warning</strong>
+The geometry of the object needs to have plane faces on which we’ll stick our Aruco markers. This requirement is essential to the good detection of the markers!</p>
+</div></blockquote>
+</section>
 <section id="pinhole-camera-model">
 <h2>pinhole_camera_model<a class="headerlink" href="#pinhole-camera-model" title="Permalink to this heading">#</a></h2>
 <br>
-<p><strong>The pinhole_camera_model</strong> modelise a camera by perspective projection. It transforms a 3D point expressed in its own referential into a 2D point expressed in the image plan.</p>
-<p>The transformation is caracterised according to 2 types of parameters:</p>
-<ul>
+<p><strong>The pinhole_camera_model</strong> models a camera by perspective projection. It establish the link between the 3D point expressed in its own referential into a 2D point expressed in the image plan.</p>
+<p>The transformation is characterised according to 2 types of parameters:</p>
+<ul class="simple">
 <li><p>The internal camera parameters, which are</p>
-<ul class="simple">
-<li><p>principal point offset.</p></li>
-</ul>
-<ul class="simple">
-<li><p>distortion coefficient from the lens.</p></li>
+<ul>
+<li><p>the principal point offset.</p></li>
+<li><p>the distortion coefficient from the lens.</p></li>
 </ul>
 </li>
-<li><p>The external parameters which correspond to the rotation matrix and translation vector that rely the two referentials. These external parameters are the key to the pycopo.pose_estimate() function</p></li>
+<li><p>The external parameters which correspond to the rotation matrix and translation vector that rely the two referentials. These external parameters are the key to the pose estimation function.</p></li>
 </ul>
 <p align="center">
     <img src="_images/modèle_sténopé.jpg"  width="80%" height="80%">
@@ -459,7 +471,7 @@ document.write(`
 <section id="aruco-marker-detection">
 <h2>aruco_marker_detection<a class="headerlink" href="#aruco-marker-detection" title="Permalink to this heading">#</a></h2>
 <br>
-<p>Now that we are aware of the relation between the 2D and the 3D corresponding point, the first step of the pycopo process rely on retrieving the 2D coordinates of the object we want to track. In our case the aruco marker.</p>
+<p>Now that we are aware of the relation between the 2D and the 3D corresponding point, the first step of the pycopo process relies on retrieving the 2D coordinates of the object we want to track in the image plan. The strategy employed in our case is to detect .</p>
 <p>This step is executed using the <strong>aruco.detect_marker()</strong> function avaible in the opencv module which return the 2D coordinates of each corner from the marker detected and its id.</p>
 <br>
 <p align="center">
@@ -577,12 +589,12 @@ process.</p>
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="usage.html"
+       href="Installation.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Usage</p>
+        <p class="prev-next-title">Installation</p>
       </div>
     </a>
     <a class="right-next"
@@ -609,6 +621,7 @@ process.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-composite">the composite</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pinhole-camera-model">pinhole_camera_model</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aruco-marker-detection">aruco_marker_detection</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pose-estimation">pose_estimation</a></li>
