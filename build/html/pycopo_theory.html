@@ -439,7 +439,7 @@ document.write(`
 <li><p>The external parameters which correspond to the rotation matrix and translation vector that rely the two referentials. These external parameters are the key to the pycopo.pose_estimate() function</p></li>
 </ul>
 <p align="center">
-    <img src="_images/modèle_sténopé.jpg"  width="80%" height="80%">
+    <img src="html/_images/modèle_sténopé.jpg"  width="80%" height="80%">
 </p>
 <p align="right">
   <a href="https://docs.opencv.org/3.4/d9/d0c/group__calib3d.html" style="font-size: 15px;">opencv_pinhole_model_camera</a>
@@ -463,7 +463,7 @@ document.write(`
 <p>This step is executed using the <strong>aruco.detect_marker()</strong> function avaible in the opencv module which return the 2D coordinates of each corner from the marker detected and its id.</p>
 <br>
 <p align="center">
-    <img src="_images/Aruco_marker_detection.JPG"  width="50%" height="60%">
+    <img src="html/_images/Aruco_marker_detection.JPG"  width="50%" height="60%">
 </p>
 <br>
 <p>Behind the function are hidding a succession of thresholding, contour detection and binary transcription which allow us to locate on the image and identify every marker present in the frame.</p>
@@ -477,18 +477,18 @@ document.write(`
 <br>
 <p>Once the marker corner’s 2D coordinate stored, we will define the 3D coordinates of the marker expressed in its own referential, based on the dimension of the marker.</p>
 <p align="center">
-  <img src="_images/3d_coord_corners.jpg" width="70%" height="70%">
+  <img src="html/_images/3d_coord_corners.jpg" width="70%" height="70%">
 </p>
 <br>
 <p align="center">
-  <img src="_images/3d_coord_corners_3d_views.JPG" width="70%" height="70%">
+  <img src="html/_images/3d_coord_corners_3d_views.JPG" width="70%" height="70%">
 </p>
 <p>As the pose is caracterised by its transformation matrix [R|t], the goal here is to find the matching matrix which allow us the go from the 2D coord obtained with aruco.detectmarker() and the 3D coord defined just above.</p>
 <p>The strategy developped in pycopo’s module, initialize a first transformation matrix which allows us to project our 3D points towards their 2D expression.</p>
 <p>Then by comparison in regard to the 2D coordinates obtained with Aruco.detectmarker() function, we can decide weather yes or no the transformation matrix is correct. The transformation matrix optimization is applied using the <a class="reference external" href="https://fr.wikipedia.org/wiki/M%C3%A9thode_des_moindres_carr%C3%A9s">least square</a>.</p>
 <p>Here the results:</p>
 <p align="center">
-  <img src="_images/repere_marker.JPG" width="50%">
+  <img src="html/_images/repere_marker.JPG" width="50%">
 </p>
 <hr class="docutils" />
 </section>
@@ -497,7 +497,7 @@ document.write(`
 <br>
 <p>A problem still resides in our pose estimation method. As we are working with <strong>monocular vision</strong>, we encouter geometrical perspective problem for long distance object detection.</p>
 <p align="center">
-  <img src="_images/ambiguité_de_pose.JPG" width="100%" height="100%">
+  <img src="html/_images/ambiguité_de_pose.JPG" width="100%" height="100%">
 </p>
 <p>As illustrated in the figure above, two rotations are valid when it comes to determine the transformation matrix.</p>
 <p>In order to solve the problematic, we are going to introduce <strong>composite marker</strong>.</p>
@@ -510,12 +510,12 @@ document.write(`
 <p>Here a set of example of what can a composite marker:</p>
 <br>
 <p align="center">
-  <img src="_images/totem.png" width="33%" height="33%">
-  <img src="_images/rock_composite.JPG" width="19%" height="19%">
+  <img src="html/_images/totem.png" width="33%" height="33%">
+  <img src="html/_images/rock_composite.JPG" width="19%" height="19%">
 </p>
 <p align="center">
-  <img src="_images/composite_im.jpg" width="20%" height="20%">
-  <img src="_images/pendulum_im2.png" width="32%" height="32%">
+  <img src="html/_images/composite_im.jpg" width="20%" height="20%">
+  <img src="html/_images/pendulum_im2.png" width="32%" height="32%">
 </p>
 <br>
 <p>Composite marker confer the benefit to present multiples aruco markers in a same frame, which will help us to create relations between their pose using <a class="reference external" href="https://en.wikipedia.org/wiki/Graph_theory#:~:text=In%20mathematics%2C%20graph%20theory%20is,also%20called%20links%20or%20lines">graph theory</a>.</p>
@@ -526,12 +526,12 @@ document.write(`
 <br>
 <p>In pycopo module, we use graph theory in order to establish the whole possible relationship between a set of image of a composite and the markers detected in each frame.</p>
 <p align="center">
-  <img src="_images/graph_M_I.JPG" width="45%" height="45%">
+  <img src="html/_images/graph_M_I.JPG" width="45%" height="45%">
 </p>
 <p>In the figure above, the markers are represented by the blue points and the red ones correspond to the images. The key specifity of our image dataset is <strong>that an image detects multiples markers and a marker can be detected in several images</strong>.<br />
 It allows us to build cycles in our graph as illustrated here:</p>
 <p align="center">
-  <img src="_images/graph_cycle.JPG" width="40%" height="40%">
+  <img src="html/_images/graph_cycle.JPG" width="40%" height="40%">
 </p>
 <p>Let’s focus on the ξ0 cycle drew in green. It is composed of the following path: <strong>{[M1;I0]-&gt;[I0;M2]-&gt;[M2;I1]-&gt;[I1;M1]}</strong></p>
 <p><em><strong>(Note that [M1,I0] refers to the matrix transformation for the marker M1 detected in the image I0 of our dataset. Additionally, remember that every marker detected in an image is associated to two transformation matrix due to pose ambiguity).</strong></em></p>
@@ -562,7 +562,7 @@ process.</p>
 </p>
 <p>Here the results:</p>
 <p align="center">
-  <img src="_images/repere_composite.JPG" width="110%">
+  <img src="html/_images/repere_composite.JPG" width="110%">
 </p>
 <p>We invite you to familiarize yourself with the <em><strong>pycopo module</strong></em> by following the tutorial available in the Tutorial chapter of the doc.</p>
 </section>

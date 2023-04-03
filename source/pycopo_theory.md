@@ -13,7 +13,7 @@ The transformation is caracterised according to 2 types of parameters:
 + The external parameters which correspond to the rotation matrix and translation vector that rely the two referentials. These external parameters are the key to the pycopo.pose_estimate() function
 
 <p align="center">
-    <img src="_images/modèle_sténopé.jpg"  width="80%" height="80%">
+    <img src="html/_images/modèle_sténopé.jpg"  width="80%" height="80%">
 </p>
 
 <p align="right">
@@ -48,7 +48,7 @@ This step is executed using the **aruco.detect_marker()** function avaible in th
 <br>
 
 <p align="center">
-    <img src="_images/Aruco_marker_detection.JPG"  width="50%" height="60%">
+    <img src="html/_images/Aruco_marker_detection.JPG"  width="50%" height="60%">
 </p>
 
 <br>
@@ -70,13 +70,13 @@ Once the marker corner's 2D coordinate stored, we will define the 3D coordinates
 
 
 <p align="center">
-  <img src="_images/3d_coord_corners.jpg" width="70%" height="70%">
+  <img src="html/_images/3d_coord_corners.jpg" width="70%" height="70%">
 </p>
 
 <br>
 
 <p align="center">
-  <img src="_images/3d_coord_corners_3d_views.JPG" width="70%" height="70%">
+  <img src="html/_images/3d_coord_corners_3d_views.JPG" width="70%" height="70%">
 </p>
 
 As the pose is caracterised by its transformation matrix [R|t], the goal here is to find the matching matrix which allow us the go from the 2D coord obtained with aruco.detectmarker() and the 3D coord defined just above.
@@ -88,7 +88,7 @@ Then by comparison in regard to the 2D coordinates obtained with Aruco.detectmar
 Here the results: 
 
 <p align="center">
-  <img src="_images/repere_marker.JPG" width="50%">
+  <img src="html/_images/repere_marker.JPG" width="50%">
 </p>
 
 ________________ 
@@ -101,7 +101,7 @@ ________________
 A problem still resides in our pose estimation method. As we are working with **monocular vision**, we encouter geometrical perspective problem for long distance object detection.
 
 <p align="center">
-  <img src="_images/ambiguité_de_pose.JPG" width="100%" height="100%">
+  <img src="html/_images/ambiguité_de_pose.JPG" width="100%" height="100%">
 </p>
 
 As illustrated in the figure above, two rotations are valid when it comes to determine the transformation matrix.
@@ -121,13 +121,13 @@ Here a set of example of what can a composite marker:
 <br>
 
 <p align="center">
-  <img src="_images/totem.png" width="33%" height="33%">
-  <img src="_images/rock_composite.JPG" width="19%" height="19%">
+  <img src="html/_images/totem.png" width="33%" height="33%">
+  <img src="html/_images/rock_composite.JPG" width="19%" height="19%">
 </p>
 
 <p align="center">
-  <img src="_images/composite_im.jpg" width="20%" height="20%">
-  <img src="_images/pendulum_im2.png" width="32%" height="32%">
+  <img src="html/_images/composite_im.jpg" width="20%" height="20%">
+  <img src="html/_images/pendulum_im2.png" width="32%" height="32%">
 </p>
 
 <br>
@@ -144,14 +144,14 @@ ________________
 In pycopo module, we use graph theory in order to establish the whole possible relationship between a set of image of a composite and the markers detected in each frame. 
 
 <p align="center">
-  <img src="_images/graph_M_I.JPG" width="45%" height="45%">
+  <img src="html/_images/graph_M_I.JPG" width="45%" height="45%">
 </p>
 
 In the figure above, the markers are represented by the blue points and the red ones correspond to the images. The key specifity of our image dataset is **that an image detects multiples markers and a marker can be detected in several images**.  
 It allows us to build cycles in our graph as illustrated here:
 
 <p align="center">
-  <img src="_images/graph_cycle.JPG" width="40%" height="40%">
+  <img src="html/_images/graph_cycle.JPG" width="40%" height="40%">
 </p>
 
 Let's focus on the &xi;0 cycle drew in green. It is composed of the following path: **{[M1;I0]->[I0;M2]->[M2;I1]->[I1;M1]}** 
@@ -195,7 +195,7 @@ It follows the same optimization process described in the [pose_estimation secti
 Here the results: 
 
 <p align="center">
-  <img src="_images/repere_composite.JPG" width="110%">
+  <img src="html/_images/repere_composite.JPG" width="110%">
 </p>
 
 We invite you to familiarize yourself with the ***pycopo module*** by following the tutorial available in the Tutorial chapter of the doc.
