@@ -440,7 +440,7 @@ document.write(`
 <div><p>The <strong>first step</strong> consist in importing every module required to run this tutorial:</p>
 </div></blockquote>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -466,7 +466,7 @@ document.write(`
 <div><p>Then we need to properly set up our image dataset:</p>
 </div></blockquote>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># SETUP</span>
@@ -489,7 +489,7 @@ document.write(`
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">target_dir</span> <span class="o">=</span> <span class="s2">&quot;../build/html/_images/&quot;</span>
@@ -539,7 +539,7 @@ document.write(`
 <div><p>This dataframe will contain our images, the corner’s coordinates from the markers detected in each image, the poses associated and many more info we are going to manipulate in the creation of our composite.</p>
 </div></blockquote>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># STEP 1: PREPROCESSING</span>
@@ -566,12 +566,12 @@ document.write(`
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;pycopo.calibration.ImageBatchCalibration at 0x7fc328c68d90&gt;
+&lt;pycopo.calibration.ImageBatchCalibration at 0x7f88f4c19310&gt;
 </pre></div></div>
 </div>
 </section>
@@ -582,7 +582,7 @@ document.write(`
 <div><p>We initiate the creation of our composite by detecting and estimating the pose of any marker identifiable.</p>
 </div></blockquote>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">batch</span><span class="o">.</span><span class="n">detect_markers</span><span class="p">(</span>
@@ -598,7 +598,7 @@ document.write(`
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Estimating pose on detect id_detect: 1004: 100%|██████████| 1005/1005 [00:12&lt;00:00, 77.88it/s]
+Estimating pose on detect id_detect: 1004: 100%|██████████| 1005/1005 [00:11&lt;00:00, 86.81it/s]
 </pre></div></div>
 </div>
 <blockquote>
@@ -608,7 +608,7 @@ Estimating pose on detect id_detect: 1004: 100%|██████████| 
 <div><p>A blue point is also drew at the upper-left corner, allowing us to observe the orientation’s marker.</p>
 </div></blockquote>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span> <span class="o">=</span> <span class="s2">&quot;./_outputs_calibration&quot;</span>
@@ -622,7 +622,7 @@ Estimating pose on detect id_detect: 1004: 100%|██████████| 
 <div><p>Here a zoomed in image with its marker drew:</p>
 </div></blockquote>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">im</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s2">&quot;./_outputs_calibration/img_0099_markers.jpg&quot;</span><span class="p">)</span>
@@ -633,12 +633,12 @@ Estimating pose on detect id_detect: 1004: 100%|██████████| 
 </div>
 </div>
 <div class="nboutput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.image.AxesImage at 0x7fc328b95670&gt;
+&lt;matplotlib.image.AxesImage at 0x7f88f4ae2f10&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -656,7 +656,7 @@ Estimating pose on detect id_detect: 1004: 100%|██████████| 
 <div><p>If we want to visualize our raw marker/image detection data, we end-up with this graph:</p>
 </div></blockquote>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">batch</span><span class="o">.</span><span class="n">merge_all</span><span class="p">()</span>
@@ -694,7 +694,7 @@ Estimating pose on detect id_detect: 1004: 100%|██████████| 
 </ul>
 </div></blockquote>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">batch</span><span class="o">.</span><span class="n">get_graph_data</span><span class="p">(</span><span class="n">plot_markers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">atomic_cycle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">deph_max</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -706,7 +706,7 @@ Estimating pose on detect id_detect: 1004: 100%|██████████| 
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Working on cycle: (&#39;m189&#39;, &#39;i115&#39;, &#39;m188&#39;, &#39;i114&#39;): 100%|██████████| 680/680 [00:21&lt;00:00, 31.93it/s]
+Working on cycle: (&#39;m189&#39;, &#39;i115&#39;, &#39;m188&#39;, &#39;i114&#39;): 100%|██████████| 680/680 [00:19&lt;00:00, 34.41it/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -728,7 +728,7 @@ ambigus data    = 180 poses
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Working on cycle: (&#39;m193&#39;, &#39;i114&#39;, &#39;m188&#39;, &#39;i113&#39;): 100%|██████████| 463/463 [00:12&lt;00:00, 38.17it/s]
+Working on cycle: (&#39;m193&#39;, &#39;i114&#39;, &#39;m188&#39;, &#39;i113&#39;): 100%|██████████| 463/463 [00:11&lt;00:00, 40.44it/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -753,7 +753,7 @@ ambigus data    = 24 poses
 <div><p>Here the resulting graph from the whole process:</p>
 </div></blockquote>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">batch</span><span class="o">.</span><span class="n">graph_calibration</span><span class="p">()</span>
@@ -772,7 +772,7 @@ ambigus data    = 24 poses
 <div><p><em>green nodes: non-central marker poses | red nodes: image | blue nodes: central marker poses</em></p>
 </div></blockquote>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">batch</span><span class="o">.</span><span class="n">markers_on_images</span><span class="p">()</span>
@@ -780,7 +780,7 @@ ambigus data    = 24 poses
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -890,7 +890,7 @@ ambigus data    = 24 poses
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">img_batch</span> <span class="o">=</span> <span class="n">pcp</span><span class="o">.</span><span class="n">calibration</span><span class="o">.</span><span class="n">ImageBatchCompositePose</span><span class="p">(</span><span class="n">batch</span><span class="p">)</span>
