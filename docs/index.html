@@ -1,0 +1,645 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+<meta content="Top-level documentation for pycopo library, with links to the rest of the site.. " lang="en" name="description" xml:lang="en" />
+
+    <title>The Pycopo Sphinx Documentation &#8212; pycopo 0.0.1 documentation</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="shortcut icon" href="https://gitlab.com/uploads/-/system/project/avatar/15363012/6x6_1000-12.jpeg?width=64"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Usage" href="usage.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search the docs ..."
+         aria-label="Search the docs ..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+<div class="bd-header__inner bd-page-width">
+  <label class="sidebar-toggle primary-toggle" for="__primary">
+    <span class="fa-solid fa-bars"></span>
+  </label>
+  
+  <div class="navbar-header-items__start">
+    
+      <div class="navbar-item">
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="https://gitlab.com/uploads/-/system/project/avatar/15363012/6x6_1000-12.jpeg?width=64" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="https://gitlab.com/uploads/-/system/project/avatar/15363012/6x6_1000-12.jpeg?width=64" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+    
+  </div>
+  
+  
+  <div class="col-lg-9 navbar-header-items">
+    
+    <div class="me-auto navbar-header-items__center">
+      
+        <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="pycopo_theory.html">
+                        The theory behind pycopo modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="modules.html">
+                        Pycopo module dictionnary
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="tutorial.html">
+                        Jupyter Notebook tutorial
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://www.univ-smb.fr/symme/">
+                    SYMME
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+      
+    </div>
+    
+    
+    <div class="navbar-header-items__end">
+      
+        <div class="navbar-item navbar-persistent--container">
+          
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+        </div>
+      
+      
+        <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+      
+        <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gitlab.com/symmehub/pycopo" title="GitLab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-gitlab"></i></span>
+            <label class="sr-only">GitLab</label></a>
+        </li>
+</ul></div>
+      
+    </div>
+    
+  </div>
+  
+  
+    <div class="navbar-persistent--mobile">
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+    </div>
+  
+
+  
+</div>
+
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+      <div class="sidebar-header-items__center">
+        
+          <div class="navbar-item"><nav class="navbar-nav">
+  <p class="sidebar-header-items__title"
+     role="heading"
+     aria-level="1"
+     aria-label="Site Navigation">
+    Site Navigation
+  </p>
+  <ul class="bd-navbar-elements navbar-nav">
+    
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="usage.html">
+                        Usage
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="pycopo_theory.html">
+                        The theory behind pycopo modules
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="modules.html">
+                        Pycopo module dictionnary
+                      </a>
+                    </li>
+                
+
+                    <li class="nav-item">
+                      <a class="nav-link nav-internal" href="tutorial.html">
+                        Jupyter Notebook tutorial
+                      </a>
+                    </li>
+                
+
+                <li class="nav-item">
+                  <a class="nav-link nav-external" href="https://www.univ-smb.fr/symme/">
+                    SYMME
+                  </a>
+                </li>
+                
+  </ul>
+</nav></div>
+        
+      </div>
+    
+    
+    
+      <div class="sidebar-header-items__end">
+        
+          <div class="navbar-item">
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script></div>
+        
+          <div class="navbar-item"><ul class="navbar-icon-links navbar-nav"
+    aria-label="Icon Links">
+        <li class="nav-item">
+          
+          
+          
+          
+          
+          
+          
+          
+          <a href="https://gitlab.com/symmehub/pycopo" title="GitLab" class="nav-link" rel="noopener" target="_blank" data-bs-toggle="tooltip" data-bs-placement="bottom"><span><i class="fa-brands fa-square-gitlab"></i></span>
+            <label class="sr-only">GitLab</label></a>
+        </li>
+</ul></div>
+        
+      </div>
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+<h3><a href="#">Table of Contents</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pycopo_theory.html">The theory behind pycopo modules</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Pycopo module dictionnary</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Jupyter Notebook tutorial</a></li>
+</ul>
+</div>
+        <div class="sidebar-primary-item">
+  <div class="tocsection sourcelink">
+    <a href="_sources/index.md.txt">
+      <i class="fa-solid fa-file-lines"></i> Show Source
+    </a>
+  </div>
+</div>
+        <div class="sidebar-primary-item">
+<div id="searchbox"></div></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article"></div>
+              
+              
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <style>
+      canvas {
+        position: absolute;
+        top: 10px;
+        right: 55px;
+        z-index: 0;
+        background-color: transparent;
+      }
+</style>
+<section id="the-pycopo-sphinx-documentation">
+<h1>The Pycopo Sphinx Documentation<a class="headerlink" href="#the-pycopo-sphinx-documentation" title="Permalink to this heading">#</a></h1>
+<br>
+<p><strong>PYCOPO</strong> is a Python library based on the <a class="reference external" href="https://docs.opencv.org/4.x/d5/dae/tutorial_aruco_detection.html">aruco detection system</a> which aims to detect and locate <br> an object by monocular vision.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>(<em>In this documentation, the term composite will refer to the object we want to track</em>)</p>
+</div>
+<p>This library has been created in the context of the development of a tridimensionnal localisation system by monocular vision in order to provide an assistance to the shoulder surgical navigation.</p>
+<p><strong>In this Sphinx doc, you’ll find:</strong></p>
+<ul class="simple">
+<li><p>the <strong>environment’s configuration</strong> required to run the diferent functions from pycopo modules</p></li>
+<li><p>a bit of the <strong>theory</strong> behind the pycopo method <em>(pinhole camera model, pose_estimation, composite defintion, etc..)</em></p></li>
+<li><p>the complete <strong>dictionnary</strong> with each function shortly described and inputs, outputs specified</p></li>
+<li><p>an <strong>exemple</strong> showing the range of pycopo abilities</p></li>
+<li><p>a <strong>small set of examples</strong> illustrating the principals functions</p></li>
+</ul>
+<section id="installation-guide">
+<h2>Installation Guide<a class="headerlink" href="#installation-guide" title="Permalink to this heading">#</a></h2>
+<p>Information about pycopo environment installation using dockerhub.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage.html#package-installation">Package_installation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="pycopo-theory">
+<h2>Pycopo Theory<a class="headerlink" href="#pycopo-theory" title="Permalink to this heading">#</a></h2>
+<p>A brieve explanation of the concepts employed behind the pycopo library.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pycopo_theory.html">The theory behind pycopo modules</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pycopo_theory.html#pinhole-camera-model">pinhole_camera_model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pycopo_theory.html#aruco-marker-detection">aruco_marker_detection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pycopo_theory.html#pose-estimation">pose_estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pycopo_theory.html#pose-ambiguity">pose_ambiguity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pycopo_theory.html#composite-marker">composite_marker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pycopo_theory.html#graph-theory">graph_theory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pycopo_theory.html#composite-pose-estimation">composite_pose_estimation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="dictionnary">
+<h2>Dictionnary<a class="headerlink" href="#dictionnary" title="Permalink to this heading">#</a></h2>
+<p>You will find in this section every function and Class definition with a short descritpion of its usage, the list of inputs required and the output type.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Pycopo module dictionnary</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pycopo.html">pycopo.calibration module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pycopo.html#module-pycopo.core_docstring">pycopo.core module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pycopo.html#module-pycopo.utils_docstring">pycopo.utils module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading">#</a></h2>
+<p>A complete Jupyter Notebook illustrating the range capacity and usage of the Pycopo modules.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorial.html">Jupyter Notebook tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#introduction">introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#i_-module-importation">i_ module importation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#ii_-image-dataset">ii_ image dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#iii_-dataframe-initialization">iii_ dataframe initialization</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#iv_-marker-detection-et-pose-estimation">iv_ marker detection et pose estimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#v_-graph-creation">v_ graph creation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorial.html#vi_-GBU-algorithm">vi_ GBU algorithm</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gitlab.com/symmehub/pycopo">gitlab repo</a></p></li>
+<li><p><a class="reference external" href="https://www.univ-smb.fr/symme/">SYMME website</a></p></li>
+</ul>
+</div>
+<div>
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+      <script type="importmap">
+        {
+          "imports": {
+            "three": "https://unpkg.com/three@v0.151.0/build/three.module.js",
+            "addons": "https://unpkg.com/three@v0.151.0/examples/jsm/loaders/GLTFLoader.js"
+          }
+        }
+      </script>
+      <script class="animation" type="module">
+        import * as THREE from 'three';
+        import { GLTFLoader } from 'addons';
+        const scene = new THREE.Scene();
+        const renderer = new THREE.WebGLRenderer( { antialias: true } );
+        renderer.setPixelRatio( window.devicePixelRatio );
+        const size = 400;
+        renderer.setSize( size, size );
+        renderer.outputEncoding = THREE.sRGBEncoding;
+        document.body.appendChild( renderer.domElement );
+        renderer.setClearColor(0x000000, 0);
+        const camera = new THREE.PerspectiveCamera( 50, 1, 0.01, 1000 );
+        camera.position.set( -10, 0.1, 0 );
+        camera.rotation.set( -90, -90, -90 );
+        camera.lookAt( 0, 0, 1 );
+        const loader = new GLTFLoader();
+        const pmremGenerator = new THREE.PMREMGenerator(renderer);
+        loader.load( '_images/scene.glb', function ( gltf ) {
+            gltf.scene.traverse(function (child) {
+            // Check if this object is a mesh
+            if (child.isMesh) {
+            child.material = new THREE.MeshNormalMaterial();
+            }
+            });
+            const model = gltf.scene.children[0];;
+            model.position.set( 0, 0, 0 );
+            model.rotation.set( -89.5, 0, 0 );
+            const model_scale = 0.04;
+            model.scale.set(model_scale, model_scale, model_scale);
+            scene.add( model );
+            const greenMaterial = new THREE.LineBasicMaterial( { color: 0x00ff00 } );
+            const redMaterial = new THREE.LineBasicMaterial( { color: 0xff0000 } );
+            const blueMaterial = new THREE.LineBasicMaterial( { color: 0x0000ff } );
+            const greenPoints = [];
+            const redPoints = [];
+            const bluePoints = [];
+            const line_scale = 0.7;
+            greenPoints.push( new THREE.Vector3( 0, 0, 0 ) );
+            greenPoints.push( new THREE.Vector3( -line_scale, 0, 0 ) );
+            redPoints.push( new THREE.Vector3( 0, 0, 0 ) );
+            redPoints.push( new THREE.Vector3( 0, -line_scale, 0 ) );
+            bluePoints.push( new THREE.Vector3( 0, 0, 0 ) );
+            bluePoints.push( new THREE.Vector3( 0, 0, -line_scale) );
+            const greengeometry = new THREE.BufferGeometry().setFromPoints( greenPoints );
+            const redgeometry = new THREE.BufferGeometry().setFromPoints( redPoints );
+            const bluegeometry = new THREE.BufferGeometry().setFromPoints( bluePoints );
+            const greenLine = new THREE.Line( greengeometry, greenMaterial );
+            const redLine = new THREE.Line( redgeometry, redMaterial );
+            const blueLine = new THREE.Line( bluegeometry, blueMaterial );
+            const x_speed = 0.5;
+            greenLine.rotation.x += x_speed;
+            redLine.rotation.x += x_speed;
+            blueLine.rotation.x += x_speed;
+            model.rotation.x += x_speed;
+            scene.add(greenLine);
+            scene.add(redLine);
+            scene.add(blueLine);
+            function updateRotation() {
+              const y_speed = 0.005;
+              greenLine.rotation.y += y_speed;
+              redLine.rotation.y += y_speed;
+              blueLine.rotation.y += y_speed;
+              model.rotation.z += y_speed;
+              // greenLine.rotation.z += 0.01;
+              // redLine.rotation.z += 0.01;
+              // blueLine.rotation.z += 0.01;
+              // model.rotation.y += 0.01;
+            }
+            function render() {
+              updateRotation();
+              renderer.render(scene, camera);
+              requestAnimationFrame(render);
+            }
+            // Start the animation
+            requestAnimationFrame(render);
+          }, undefined, function ( error ) {
+          console.error( error );} );
+        renderer.render( scene, camera );
+      </script>
+  </div>
+</section>
+</section>
+
+
+                </article>
+              
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="right-next"
+       href="usage.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Usage</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner"></div>
+          </footer>
+        
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
+
+  <footer class="bd-footer">
+<div class="bd-footer__inner bd-page-width">
+  
+    <div class="footer-items__start">
+      
+        <div class="footer-item">
+  <p class="copyright">
+    
+      © Copyright 2023, matis.
+      <br/>
+    
+  </p>
+</div>
+      
+        <div class="footer-item">
+  <p class="sphinx-version">
+    Created using <a href="https://sphinx-doc.org/">Sphinx</a> 5.0.2.
+    <br/>
+  </p>
+</div>
+      
+    </div>
+  
+  
+    <div class="footer-items__end">
+      
+        <div class="footer-item"><p class="theme-version">
+  Built with the <a href="https://pydata-sphinx-theme.readthedocs.io/en/stable/index.html">PyData Sphinx Theme</a> 0.13.1.
+</p></div>
+      
+    </div>
+  
+</div>
+
+  </footer>
+  </body>
+</html>
