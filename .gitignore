@@ -4,3 +4,5 @@
 *.PNG 
 *.JPG 
 *.tif
+
+!**/build/_images/*
