@@ -18,7 +18,7 @@ The **pycopo** module is execectubale in docker container because of it specific
 
         $ docker pull matisboualam/mon_image:0.0
     
-    Finally build and run the docker compose:
+    + Finally build and run the docker compose:
 
     .. code-block:: console
         
