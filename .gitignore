@@ -5,4 +5,4 @@
 *.JPG 
 *.tif
 
-!**/build/_images/*
+!**/docs/html/_images/*
