@@ -64,7 +64,7 @@ pycopo_theory
 
 ## Dictionnary
 
-You will find in this section every function and Class definition with a short descritpion of its usage, the list of inputs required and the output type.
+In this section, you'll find every function and Class definition with a short descritpion of its usage, the list of inputs required and the output type.
 
 ```{toctree}
 :maxdepth: 2
@@ -74,7 +74,7 @@ modules
 
 ## Example
 
-A complete Jupyter Notebook illustrating the range capacity and usage of the Pycopo modules.
+A Jupyter Notebook illustrating the calibration of a Composite.
 
 ```{toctree}
 

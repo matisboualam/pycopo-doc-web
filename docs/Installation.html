@@ -339,10 +339,7 @@ document.write(`
         <div class="sidebar-primary-item">
 <h3><a href="index.html">Table of Contents</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#package-installation">Package_installation</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="pycopo_theory.html">The theory behind pycopo modules</a></li>
@@ -416,8 +413,7 @@ document.write(`
                   
   <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h1>
-<section id="package-installation">
-<span id="id1"></span><h2>Package_installation<a class="headerlink" href="#package-installation" title="Permalink to this heading">#</a></h2>
+<hr class="docutils" />
 <dl>
 <dt>The <strong>pycopo</strong> module is execectubale in docker container because of it specific environment.</dt><dd><ul class="simple">
 <li><p>First clone the project throught this gitlab link:</p></li>
@@ -426,9 +422,12 @@ document.write(`
 </pre></div>
 </div>
 <ul class="simple">
-<li><p>Then pull the docker image using this code</p></li>
+<li><p>Then pull the docker image using these commands line in a terminal:</p></li>
 </ul>
-<p>Finally build and run the docker compose following these commands:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>docker pull matisboualam/mon_image:0.0
+</pre></div>
+</div>
+<p>Finally build and run the docker compose:</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>docker compose build main_container
 
 <span class="gp">$ </span>docker compose run -rm -i main_container
@@ -446,7 +445,6 @@ document.write(`
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>5
 </pre></div>
 </div>
-</section>
 </section>
 
 
@@ -483,16 +481,6 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#package-installation">Package_installation</a></li>
-</ul>
-  </nav></div>
 
   <div class="sidebar-secondary-item">
   <div class="tocsection sourcelink">

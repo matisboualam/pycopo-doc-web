@@ -1,7 +1,8 @@
 Installation
 ============
 .. _installation:
-Package_installation
+    Package_installation
+
 --------------------
 
 The **pycopo** module is execectubale in docker container because of it specific environment. 
@@ -11,11 +12,13 @@ The **pycopo** module is execectubale in docker container because of it specific
         
         $ git clone https://gitlab.com/symmehub/pycopo.git
 
-    + Then pull the docker image using this code
+    + Then pull the docker image using these commands line in a terminal:
+
     .. code-block:: console
+
         $ docker pull matisboualam/mon_image:0.0
     
-    Finally build and run the docker compose following these commands:
+    Finally build and run the docker compose:
 
     .. code-block:: console
         

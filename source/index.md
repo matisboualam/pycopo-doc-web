@@ -74,7 +74,7 @@ modules
 
 ## Example
 
-A complete Jupyter Notebook illustrating the range capacity and usage of the Pycopo modules.
+A Jupyter Notebook illustrating the calibration of a Composite.
 
 ```{toctree}
 
