@@ -24,22 +24,22 @@ html_theme.sidebar_secondary.remove: true
 
 
 
-**PYCOPO** is a Python library based on the [aruco detection system](https://docs.opencv.org/4.x/d5/dae/tutorial_aruco_detection.html) which aims to detect and locate <br> an object by monocular vision. 
+**PYCOPO** is a Python library based on the [aruco detection system](https://docs.opencv.org/4.x/d5/dae/tutorial_aruco_detection.html) which aims to detect and locate <br> any object which presents plane faces using only monocular vision. 
 
 
 ```{note}
-(*In this documentation, the term composite will refer to the object we want to track*)
+(*In this documentation, we will refer to the term composite when it will come design the object we want to track*)
 ```
 
-This library has been created in the context of the development of a tridimensionnal localisation system by monocular vision in order to provide an assistance to the shoulder surgical navigation. 
+This library has been written in the context of the development of a tridimensionnal localisation system by monocular vision in order to provide an assistance to the shoulder surgical navigation in collaboration with company Oneortho-Medical. 
 
 **In this Sphinx doc, you'll find:**
 
 - the **environment's configuration** required to run the diferent functions from pycopo modules
 - a bit of the **theory** behind the pycopo method *(pinhole camera model, pose_estimation, composite defintion, etc..)*
-- the complete **dictionnary** with each function shortly described and inputs, outputs specified
+- a complete **dictionnary** with each function shortly described
 - an **exemple** showing the range of pycopo abilities
-- a **small set of examples** illustrating the principals functions
+- a **small set of examples** illustrating the main functions
 
 
 ## Installation Guide
@@ -49,7 +49,7 @@ Information about pycopo environment installation using dockerhub.
 ```{toctree}
 :maxdepth: 2
 
-usage
+Installation
 ```
 
 ## Pycopo Theory
