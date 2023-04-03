@@ -9,7 +9,7 @@ Before going any further, let's define what we will need to have in order to use
   + A set of Aruco markers big enough to be detected. The marker size depends on the average distance of work (sides of 15mm for a work distance of 75 cm seems to be a good starting point).
   + Finally, our object we'll define as our composite. 
   
->**Warning**
+>**&#9432;**
 >The geometry of the object needs to have plane faces on which we'll stick our Aruco markers. This requirement is essential to the good detection of the markers! 
 
 
@@ -54,9 +54,9 @@ ________________
 
 <br>
 
-Now that we are aware of the relation between the 2D and the 3D corresponding point, the first step of the pycopo process relies on retrieving the 2D coordinates of the object we want to track in the image plan. The strategy employed in our case is to detect .
+Now that we are aware of the relation between the 2D and the 3D corresponding point, the first step of the pycopo process relies on retrieving the 2D coordinates of the object we want to track in the image plan. The strategy employed in our case is to detect every marker visible on an image and store the 2D corner's coordinates associated as its id.
 
-This step is executed using the **aruco.detect_marker()** function avaible in the opencv module which return the 2D coordinates of each corner from the marker detected and its id.
+This step is executed using the **aruco.detect_marker()** function avaible in the opencv module.
 
 <br>
 
@@ -66,7 +66,7 @@ This step is executed using the **aruco.detect_marker()** function avaible in th
 
 <br>
 
-Behind the function are hidding a succession of thresholding, contour detection and binary transcription which allow us to locate on the image and identify every marker present in the frame.   
+Behind the function are hidding a succession of thresholding, contour detection and binary transcription which allow us to locate on the image and identify every aruco marker present in the frame.   
 
 <p align="right">
   <a href="https://docs.opencv.org/4.x/d5/dae/tutorial_aruco_detection.html" style="font-size: 15px;">to know more about aruco detection system</a>
@@ -79,7 +79,7 @@ ________________
 
 <br>
 
-Once the marker corner's 2D coordinate stored, we will define the 3D coordinates of the marker expressed in its own referential, based on the dimension of the marker.
+Once the marker corner's 2D coordinate stored, we will define a new virtual square with the same dimension of the marker that we are simply going to translate on (Z) axis first. The corners of this virtual square is now expressed in 3D.
 
 
 <p align="center">
@@ -92,11 +92,11 @@ Once the marker corner's 2D coordinate stored, we will define the 3D coordinates
   <img src="_images/3d_coord_corners_3d_views.JPG" width="70%" height="70%">
 </p>
 
-As the pose is caracterised by its transformation matrix [R|t], the goal here is to find the matching matrix which allow us the go from the 2D coord obtained with aruco.detectmarker() and the 3D coord defined just above.
+As the pose is characterised by its transformation matrix [R|t], the goal here is to find the matching matrix which allows us to go from the 4 virtual corners in 3D to the 4 reals corners in 2D from our marker obtained with the aruco.detectmarker() function.
 
 The strategy developped in pycopo's module, initialize a first transformation matrix which allows us to project our 3D points towards their 2D expression.
 
-Then by comparison in regard to the 2D coordinates obtained with Aruco.detectmarker() function, we can decide weather yes or no the transformation matrix is correct. The transformation matrix optimization is applied using the [least square](https://fr.wikipedia.org/wiki/M%C3%A9thode_des_moindres_carr%C3%A9s).
+Then by comparison in regard to the 2D coordinates obtained with Aruco.detectmarker() function, we can decide whether yes or no the transformation matrix is correct. The transformation matrix optimization is applied using the [least square](https://fr.wikipedia.org/wiki/M%C3%A9thode_des_moindres_carr%C3%A9s).
 
 Here the results: 
 
