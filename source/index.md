@@ -64,7 +64,7 @@ pycopo_theory
 
 ## Dictionnary
 
-You will find in this section every function and Class definition with a short descritpion of its usage, the list of inputs required and the output type.
+In this section, you'll find every function and Class definition with a short descritpion of its usage, the list of inputs required and the output type.
 
 ```{toctree}
 :maxdepth: 2
