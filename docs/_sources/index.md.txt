@@ -41,22 +41,16 @@ This library has been written in the context of the development of a tridimensio
 - a **small set of examples** illustrating the main functions
 
 ```{gallery-grid}
-:grid-columns: 1 2 2 3
+:grid-columns: 1 2 2 2
 
-- header: "{fab}`bootstrap;pst-color-primary` Installation Guide"
+- header: "Installation Guide"
   content: "Use Bootstrap classes and functionality in your documentation."
-- header: "{fas}`bolt;pst-color-primary` Pycopo Theory"
+- header: "Pycopo Theory"
   content: "Site sections will change behavior and size at different screen sizes."
-- header: "{fas}`circle-half-stroke;pst-color-primary` Dictionnary"
+- header: "Pycopo dictionnary"
   content: "Users can toggle between light and dark themes interactively."
-- header: "{fas}`palette;pst-color-primary` Customizable UI and themes"
+- header: "Jupyter tutorial"
   content: "Customize colors and branding with CSS variables, and build custom UIs with [Sphinx Design](user_guide/web-components)."
-- header: "{fab}`python;pst-color-primary` Supports PyData and Jupyter"
-  content: "CSS and UI support for Jupyter extensions and PyData execution outputs."
-  link: "examples/pydata.html"
-- header: "{fas}`lightbulb;pst-color-primary` Example Gallery"
-  content: "See our gallery of projects that use this theme."
-  link: "examples/gallery.html"
 ```
 
 ## Installation Guide
