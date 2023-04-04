@@ -572,7 +572,7 @@ document.write(`
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;pycopo.calibration.ImageBatchCalibration at 0x7f1b043a4a00&gt;
+&lt;pycopo.calibration.ImageBatchCalibration at 0x7faa5c3bc9a0&gt;
 </pre></div></div>
 </div>
 </section>
@@ -599,7 +599,7 @@ document.write(`
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Estimating pose on detect id_detect: 1004: 100%|██████████| 1005/1005 [00:13&lt;00:00, 72.07it/s]
+Estimating pose on detect id_detect: 1004: 100%|██████████| 1005/1005 [00:13&lt;00:00, 74.27it/s]
 </pre></div></div>
 </div>
 <blockquote>
@@ -639,7 +639,7 @@ Estimating pose on detect id_detect: 1004: 100%|██████████| 
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.image.AxesImage at 0x7f1accc71a00&gt;
+&lt;matplotlib.image.AxesImage at 0x7faa23412a90&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -687,7 +687,7 @@ Estimating pose on detect id_detect: 1004: 100%|██████████| 
 </ul>
 </div></blockquote>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">batch</span><span class="o">.</span><span class="n">get_graph_data</span><span class="p">(</span><span class="n">plot_markers</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">criterion</span><span class="o">=</span><span class="mf">0.15</span><span class="p">,</span> <span class="n">atomic_cycle</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">deph_max</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -699,7 +699,7 @@ Estimating pose on detect id_detect: 1004: 100%|██████████| 
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Working on cycle: (&#39;m189&#39;, &#39;i115&#39;, &#39;m188&#39;, &#39;i114&#39;): 100%|██████████| 680/680 [00:25&lt;00:00, 26.50it/s]
+Working on cycle: (&#39;m189&#39;, &#39;i115&#39;, &#39;m188&#39;, &#39;i114&#39;): 100%|██████████| 680/680 [00:23&lt;00:00, 28.53it/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -721,7 +721,7 @@ ambigus data    = 114 poses
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Working on cycle: (&#39;m193&#39;, &#39;i113&#39;, &#39;m204&#39;, &#39;i112&#39;): 100%|██████████| 308/308 [00:08&lt;00:00, 35.37it/s]
+Working on cycle: (&#39;m193&#39;, &#39;i113&#39;, &#39;m204&#39;, &#39;i112&#39;): 100%|██████████| 308/308 [00:08&lt;00:00, 36.85it/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -746,7 +746,7 @@ ambigus data    = 10 poses
 <div><p>Here the resulting graph from the whole process:</p>
 </div></blockquote>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">batch</span><span class="o">.</span><span class="n">graph_calibration</span><span class="p">()</span>
@@ -754,7 +754,7 @@ ambigus data    = 10 poses
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
@@ -766,7 +766,7 @@ ambigus data    = 10 poses
 <div><p><em>green nodes: non-central marker poses | red nodes: image | blue nodes: central marker poses</em></p>
 </div></blockquote>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#batch.optimize_calibration()</span>
@@ -775,7 +775,7 @@ ambigus data    = 10 poses
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">compo</span> <span class="o">=</span> <span class="n">batch</span><span class="o">.</span><span class="n">composites</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -784,7 +784,7 @@ ambigus data    = 10 poses
 </div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">dir</span> <span class="o">=</span> <span class="s2">&quot;./&quot;</span>
@@ -798,7 +798,7 @@ ambigus data    = 10 poses
 </div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><br/><span></span><span class="n">batch_compo</span> <span class="o">=</span> <span class="n">pcp</span><span class="o">.</span><span class="n">calibration</span><span class="o">.</span><span class="n">ImageBatchCompositePose</span><span class="p">(</span>
@@ -823,20 +823,20 @@ ambigus data    = 10 poses
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Estimating composite pose on image: 115: 100%|██████████| 116/116 [00:03&lt;00:00, 34.82it/s]
+Estimating composite pose on image: 115: 100%|██████████| 116/116 [00:03&lt;00:00, 36.00it/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;pycopo.calibration.ImageBatchCompositePose at 0x7f1ac5b4f1f0&gt;
+&lt;pycopo.calibration.ImageBatchCompositePose at 0x7faa217a1970&gt;
 </pre></div></div>
 </div>
 <div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">batch_compo</span><span class="o">.</span><span class="n">draw_markers</span><span class="p">()</span><span class="o">.</span><span class="n">draw_xyz_composite</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="s2">&quot;my_compo&quot;</span><span class="p">,</span> <span class="n">dimension</span><span class="o">=</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">thickness</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
@@ -856,7 +856,7 @@ Drawing markers...
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|██████████| 116/116 [01:16&lt;00:00,  1.52it/s]
+100%|██████████| 116/116 [01:26&lt;00:00,  1.34it/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -872,27 +872,27 @@ Drawing markers done
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Drawing axis markers on: img_0115.tif: 100%|██████████| 116/116 [01:30&lt;00:00,  1.29it/s]
+Drawing axis markers on: img_0115.tif: 100%|██████████| 116/116 [01:27&lt;00:00,  1.32it/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[18]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;pycopo.calibration.ImageBatchCompositePose at 0x7f1ac5b4f1f0&gt;
+&lt;pycopo.calibration.ImageBatchCompositePose at 0x7faa217a1970&gt;
 </pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">target_dir</span> <span class="o">=</span> <span class="s2">&quot;../build/html/_images/&quot;</span>
 <span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">target_dir</span><span class="p">)</span>
 <span class="n">no_gif</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">file</span> <span class="o">==</span> <span class="s2">&quot;axis_on image.gif&quot;</span><span class="p">:</span>  <span class="c1"># Change the file extensions to match your image format</span>
+    <span class="k">if</span> <span class="n">file</span> <span class="o">==</span> <span class="s2">&quot;axis_on_image.gif&quot;</span><span class="p">:</span>  <span class="c1"># Change the file extensions to match your image format</span>
         <span class="n">no_gif</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="k">if</span> <span class="n">no_gif</span><span class="p">:</span>
     <span class="n">img</span> <span class="o">=</span> <span class="p">[]</span>
@@ -906,12 +906,12 @@ Drawing axis markers on: img_0115.tif: 100%|██████████| 116/
             <span class="n">im</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">resize</span><span class="p">((</span><span class="nb">int</span><span class="p">(</span><span class="n">width</span><span class="o">/</span><span class="mi">2</span><span class="p">),</span><span class="nb">int</span><span class="p">(</span><span class="n">height</span><span class="o">/</span><span class="mi">2</span><span class="p">)))</span>
             <span class="n">img</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">im</span><span class="p">)</span>
     <span class="n">img</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">save</span><span class="p">(</span>
-        <span class="s2">&quot;../build/html/_images/axis_on image.gif&quot;</span><span class="p">,</span> <span class="n">save_all</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">append_images</span><span class="o">=</span><span class="n">img</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">duration</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="mi">0</span>
+        <span class="s2">&quot;../build/html/_images/axis_on_image.gif&quot;</span><span class="p">,</span> <span class="n">save_all</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">append_images</span><span class="o">=</span><span class="n">img</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">duration</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">loop</span><span class="o">=</span><span class="mi">0</span>
     <span class="p">)</span>
 </pre></div>
 </div>
 </div>
-<img alt="dataset gif" src="../build/html/_images/axis_on%20image.gif" />
+<img alt="dataset_with_axis" src="_images/axis_on_image.gif" />
 </section>
 </section>
 

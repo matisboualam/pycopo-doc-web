@@ -217,7 +217,7 @@
     {
      "data": {
       "text/plain": [
-       "<pycopo.calibration.ImageBatchCalibration at 0x7f1b043a4a00>"
+       "<pycopo.calibration.ImageBatchCalibration at 0x7faa5c3bc9a0>"
       ]
      },
      "execution_count": 4,
@@ -266,7 +266,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "Estimating pose on detect id_detect: 1004: 100%|██████████| 1005/1005 [00:13<00:00, 72.07it/s]\n"
+      "Estimating pose on detect id_detect: 1004: 100%|██████████| 1005/1005 [00:13<00:00, 74.27it/s]\n"
      ]
     }
    ],
@@ -316,7 +316,7 @@
     {
      "data": {
       "text/plain": [
-       "<matplotlib.image.AxesImage at 0x7f1accc71a00>"
+       "<matplotlib.image.AxesImage at 0x7faa23412a90>"
       ]
      },
      "execution_count": 7,
@@ -406,14 +406,14 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 12,
+   "execution_count": 9,
    "metadata": {},
    "outputs": [
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "Working on cycle: ('m189', 'i115', 'm188', 'i114'): 100%|██████████| 680/680 [00:25<00:00, 26.50it/s]\n"
+      "Working on cycle: ('m189', 'i115', 'm188', 'i114'): 100%|██████████| 680/680 [00:23<00:00, 28.53it/s]\n"
      ]
     },
     {
@@ -433,7 +433,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "Working on cycle: ('m193', 'i113', 'm204', 'i112'): 100%|██████████| 308/308 [00:08<00:00, 35.37it/s]\n"
+      "Working on cycle: ('m193', 'i113', 'm204', 'i112'): 100%|██████████| 308/308 [00:08<00:00, 36.85it/s]\n"
      ]
     },
     {
@@ -467,7 +467,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 13,
+   "execution_count": 10,
    "metadata": {},
    "outputs": [
     {
@@ -476,7 +476,7 @@
        "(<Pycopo Composite Marker w. 20 markers>, <Pycopo Pose batch w. 90 entries>)"
       ]
      },
-     "execution_count": 13,
+     "execution_count": 10,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -495,7 +495,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 14,
+   "execution_count": 11,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -505,7 +505,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 15,
+   "execution_count": 12,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -515,7 +515,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 16,
+   "execution_count": 13,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -530,23 +530,23 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 17,
+   "execution_count": 14,
    "metadata": {},
    "outputs": [
     {
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "Estimating composite pose on image: 115: 100%|██████████| 116/116 [00:03<00:00, 34.82it/s]\n"
+      "Estimating composite pose on image: 115: 100%|██████████| 116/116 [00:03<00:00, 36.00it/s]\n"
      ]
     },
     {
      "data": {
       "text/plain": [
-       "<pycopo.calibration.ImageBatchCompositePose at 0x7f1ac5b4f1f0>"
+       "<pycopo.calibration.ImageBatchCompositePose at 0x7faa217a1970>"
       ]
      },
-     "execution_count": 17,
+     "execution_count": 14,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -571,7 +571,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 18,
+   "execution_count": 15,
    "metadata": {},
    "outputs": [
     {
@@ -585,7 +585,7 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "100%|██████████| 116/116 [01:16<00:00,  1.52it/s]\n"
+      "100%|██████████| 116/116 [01:26<00:00,  1.34it/s]\n"
      ]
     },
     {
@@ -599,16 +599,16 @@
      "name": "stderr",
      "output_type": "stream",
      "text": [
-      "Drawing axis markers on: img_0115.tif: 100%|██████████| 116/116 [01:30<00:00,  1.29it/s]\n"
+      "Drawing axis markers on: img_0115.tif: 100%|██████████| 116/116 [01:27<00:00,  1.32it/s]\n"
      ]
     },
     {
      "data": {
       "text/plain": [
-       "<pycopo.calibration.ImageBatchCompositePose at 0x7f1ac5b4f1f0>"
+       "<pycopo.calibration.ImageBatchCompositePose at 0x7faa217a1970>"
       ]
      },
-     "execution_count": 18,
+     "execution_count": 15,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -619,7 +619,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 22,
+   "execution_count": 16,
    "metadata": {},
    "outputs": [],
    "source": [
@@ -627,7 +627,7 @@
     "files = os.listdir(target_dir)\n",
     "no_gif = True\n",
     "for file in files:\n",
-    "    if file == \"axis_on image.gif\":  # Change the file extensions to match your image format\n",
+    "    if file == \"axis_on_image.gif\":  # Change the file extensions to match your image format\n",
     "        no_gif = False\n",
     "if no_gif:\n",
     "    img = []\n",
@@ -641,7 +641,7 @@
     "            im = im.resize((int(width/2),int(height/2)))\n",
     "            img.append(im)\n",
     "    img[0].save(\n",
-    "        \"../build/html/_images/axis_on image.gif\", save_all=True, append_images=img[1:], duration=100, loop=0\n",
+    "        \"../build/html/_images/axis_on_image.gif\", save_all=True, append_images=img[1:], duration=100, loop=0\n",
     "    )"
    ]
   },
@@ -650,7 +650,7 @@
    "cell_type": "markdown",
    "metadata": {},
    "source": [
-    "![dataset gif](../build/html/_images/axis_on image.gif)"
+    "![dataset_with_axis](../build/html/_images/axis_on_image.gif)"
    ]
   }
  ],
