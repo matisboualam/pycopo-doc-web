@@ -23,7 +23,6 @@ html_theme.sidebar_secondary.remove: true
 <br>
 
 
-
 **PYCOPO** is a Python library based on the [aruco detection system](https://docs.opencv.org/4.x/d5/dae/tutorial_aruco_detection.html) which aims to detect and locate <br> any object which presents plane faces using only monocular vision. 
 
 
@@ -33,12 +32,6 @@ html_theme.sidebar_secondary.remove: true
 
 This library has been written in the context of the development of a tridimensionnal localisation system by monocular vision in order to provide an assistance to the shoulder surgical navigation in collaboration with company Oneortho-Medical. 
 
-|   |   |
-|---|---|
-|## Installation Guide<br><br>Information about pycopo environment installation using dockerhub.<br><br>```{toctree}<br>:maxdepth: 2<br><br>Installation<br>```|## Pycopo Theory<br><br>A brief explanation of the concepts employed behind the pycopo library.<br><br>```{toctree}<br>:maxdepth: 2<br><br>pycopo_theory<br>```|
-|## Dictionary<br><br>In this section, you'll find every function and Class definition with a short description of its usage, the list of inputs required and the output type.<br><br>```{toctree}<br>:maxdepth: 2<br><br>modules<br>```|## Example<br><br>A Jupyter Notebook illustrating the calibration of a Composite.<br><br>```{toctree}<br><br>tutorial.ipynb<br>```|
-
-
 **In this Sphinx doc, you'll find:**
 
 - the **environment's configuration** required to run the diferent functions from pycopo modules
@@ -46,6 +39,33 @@ This library has been written in the context of the development of a tridimensio
 - a complete **dictionnary** with each function shortly described
 - an **exemple** showing the range of pycopo abilities
 - a **small set of examples** illustrating the main functions
+
+<div style="display: table;">
+  <div style="display: table-row;">
+    <div style="display: table-cell; vertical-align: top; padding: 10px; border: 1px solid black;">
+      <h2>Installation Guide</h2>
+      <p>Information about pycopo environment installation using dockerhub.</p>
+      <code>{toctree}<br>:maxdepth: 2<br>Installation</code>
+    </div>
+    <div style="display: table-cell; vertical-align: top; padding: 10px; border: 1px solid black;">
+      <h2>Pycopo Theory</h2>
+      <p>A brief explanation of the concepts employed behind the pycopo library.</p>
+      <code>{toctree}<br>:maxdepth: 2<br>pycopo_theory</code>
+    </div>
+  </div>
+  <div style="display: table-row;">
+    <div style="display: table-cell; vertical-align: top; padding: 10px; border: 1px solid black;">
+      <h2>Dictionary</h2>
+      <p>In this section, you'll find every function and Class definition with a short description of its usage, the list of inputs required and the output type.</p>
+      <code>{toctree}<br>:maxdepth: 2<br>modules</code>
+    </div>
+    <div style="display: table-cell; vertical-align: top; padding: 10px; border: 1px solid black;">
+      <h2>Example</h2>
+      <p>A Jupyter Notebook illustrating the calibration of a Composite.</p>
+      <code>{toctree}<br>tutorial.ipynb</code>
+    </div>
+  </div>
+</div>
 
 
 ## Installation Guide

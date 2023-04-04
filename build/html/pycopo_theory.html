@@ -495,7 +495,7 @@ The geometry of the object needs to have plane faces on which we’ll stick our 
 <p align="center">
   <img src="_images/3d_coord_corners_3d_views.JPG" width="70%" height="70%">
 </p>
-<p>As the pose is characterised by its transformation matrix [R|t], the goal here is to find the matching matrix which allows us to go from the 4 virtual corners in 3D to the 4 reals corners in 2D from our marker obtained with the aruco.detectmarker() function.</p>
+<p>As the pose is characterised by its transformation matrix [R|t], the goal here is to find the matching matrix which allows us to go from the 4 virtual corners in 3D to the 4 reals corners in 2D from our marker obtained with the <code class="docutils literal notranslate"><span class="pre">aruco.detect_marker()</span></code> function.</p>
 <p>The strategy developped in pycopo’s module, initialize a first transformation matrix which allows us to project our 3D points towards their 2D expression.</p>
 <p>Then by comparison in regard to the 2D coordinates obtained with Aruco.detectmarker() function, we can decide whether yes or no the transformation matrix is correct. The transformation matrix optimization is applied using the <a class="reference external" href="https://fr.wikipedia.org/wiki/M%C3%A9thode_des_moindres_carr%C3%A9s">least square</a>.</p>
 <p>Here the results:</p>
