@@ -40,19 +40,6 @@ This library has been written in the context of the development of a tridimensio
 - an **exemple** showing the range of pycopo abilities
 - a **small set of examples** illustrating the main functions
 
-```{gallery-grid}
-:grid-columns: 1 2 2 2
-
-- header: "Installation Guide"
-  content: "Use Bootstrap classes and functionality in your documentation."
-- header: "Pycopo Theory"
-  content: "Site sections will change behavior and size at different screen sizes."
-- header: "Pycopo dictionnary"
-  content: "Users can toggle between light and dark themes interactively."
-- header: "Jupyter tutorial"
-  content: "Customize colors and branding with CSS variables, and build custom UIs with [Sphinx Design](user_guide/web-components)."
-```
-
 ## Installation Guide
 
 Information about pycopo environment installation using dockerhub.
