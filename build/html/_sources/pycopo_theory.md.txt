@@ -56,7 +56,7 @@ ________________
 
 Now that we are aware of the relation between the 2D and the 3D corresponding point, the first step of the pycopo process relies on retrieving the 2D coordinates of the object we want to track in the image plan. The strategy employed in our case is to detect every marker visible on an image and store the 2D corner's coordinates associated as its id.
 
-This step is executed using the **aruco.detect_marker()** function avaible in the opencv module.
+This step is executed using the `aruco.detect_marker()` function avaible in the opencv module.
 
 <br>
 

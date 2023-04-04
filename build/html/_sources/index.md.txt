@@ -33,6 +33,12 @@ html_theme.sidebar_secondary.remove: true
 
 This library has been written in the context of the development of a tridimensionnal localisation system by monocular vision in order to provide an assistance to the shoulder surgical navigation in collaboration with company Oneortho-Medical. 
 
+|   |   |
+|---|---|
+|## Installation Guide<br><br>Information about pycopo environment installation using dockerhub.<br><br>```{toctree}<br>:maxdepth: 2<br><br>Installation<br>```|## Pycopo Theory<br><br>A brief explanation of the concepts employed behind the pycopo library.<br><br>```{toctree}<br>:maxdepth: 2<br><br>pycopo_theory<br>```|
+|## Dictionary<br><br>In this section, you'll find every function and Class definition with a short description of its usage, the list of inputs required and the output type.<br><br>```{toctree}<br>:maxdepth: 2<br><br>modules<br>```|## Example<br><br>A Jupyter Notebook illustrating the calibration of a Composite.<br><br>```{toctree}<br><br>tutorial.ipynb<br>```|
+
+
 **In this Sphinx doc, you'll find:**
 
 - the **environment's configuration** required to run the diferent functions from pycopo modules
