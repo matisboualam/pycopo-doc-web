@@ -40,33 +40,6 @@ This library has been written in the context of the development of a tridimensio
 - an **exemple** showing the range of pycopo abilities
 - a **small set of examples** illustrating the main functions
 
-<div style="display: table;">
-  <div style="display: table-row;">
-    <div style="display: table-cell; vertical-align: top; padding: 10px; border: 1px solid black;">
-      <h2>Installation Guide</h2>
-      <p>Information about pycopo environment installation using dockerhub.</p>
-      <code>{toctree}<br>:maxdepth: 2<br>Installation</code>
-    </div>
-    <div style="display: table-cell; vertical-align: top; padding: 10px; border: 1px solid black;">
-      <h2>Pycopo Theory</h2>
-      <p>A brief explanation of the concepts employed behind the pycopo library.</p>
-      <code>{toctree}<br>:maxdepth: 2<br>pycopo_theory</code>
-    </div>
-  </div>
-  <div style="display: table-row;">
-    <div style="display: table-cell; vertical-align: top; padding: 10px; border: 1px solid black;">
-      <h2>Dictionary</h2>
-      <p>In this section, you'll find every function and Class definition with a short description of its usage, the list of inputs required and the output type.</p>
-      <code>{toctree}<br>:maxdepth: 2<br>modules</code>
-    </div>
-    <div style="display: table-cell; vertical-align: top; padding: 10px; border: 1px solid black;">
-      <h2>Example</h2>
-      <p>A Jupyter Notebook illustrating the calibration of a Composite.</p>
-      <code>{toctree}<br>tutorial.ipynb</code>
-    </div>
-  </div>
-</div>
-
 
 ## Installation Guide
 
