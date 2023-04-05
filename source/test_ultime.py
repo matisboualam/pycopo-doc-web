@@ -29,14 +29,14 @@ parameters.cornerRefinementWinSize = 2
 parameters.cornerRefinementMaxIterations = 10
 
 target_dir = "../build/html/_images/"
-dir = "./_dataset"
 files = os.listdir(target_dir)
 no_gif = True
 for file in files:
-    if file.endswith(".gif"):  # Change the file extensions to match your image format
+    if file == "imdataset.gif":  # Change the file extensions to match your image format
         no_gif = False
-if (no_gif):
-    files = sorted([file for file in os.listdir(dir) if file.endswith(".jpg")], key=lambda x: int(x.split("_")[1]))
+if no_gif:
+    dir = "./_dataset"
+    files = sorted([file for file in os.listdir(dir) if file.endswith(".tif")], key=lambda x: int(os.path.splitext(x)[0].split("_")[1]))
     images = []
     for file in files:
         if file.endswith(".tif"):  # Change the file extensions to match your image format
@@ -87,7 +87,7 @@ batch.graph_calibration()
 
 batch.optimize_calibration()
 
-#batch.plot_reprojection_errors()
+batch.plot_reprojection_errors()
 
 compo = batch.composites[-1]
 compo.set_marker_reference(mk_ref=190, inplace=True)

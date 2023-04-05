@@ -173,11 +173,11 @@ Let's focus on the &xi;0 cycle drew in green. It is composed of the following pa
 
 The cycle property we use to decide weather a transformation refers to a good or bad pose is the following formulation:
 
-> ***"If we multiply every transformation matrix associated to a good pose from a cycle following its path order until we get back to the starting point, we end up with a total transformation matrix equivalent to the Identity matrix"***
+> ***"If we compose every transformation matrix associated to a good pose from a cycle following its path order until we get back to the starting point, we end up with a total transformation matrix equivalent to the Identity matrix"***
 
 Once we know this, we submit every combination from each cycle in our graph to this condition in order to only keep the transformation that leads us to the ID matrix. *(2 poses possibility in a cycle composed of 4 transformations means: 2^4=16 combinations to test)* 
 
-As final step to this calibration process, we rebuild our cycles using exclusively good poses transformation.
+As final step to this graph calibration process, we rebuild our cycles using exclusively good poses transformation.
 
 ________________ 
 

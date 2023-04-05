@@ -358,6 +358,9 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="#iv_-marker-detection-et-pose-estimation">iv_ marker detection et pose estimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#v_-graph-creation">v_ graph creation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#vi_-GBU-algorithm">vi_ GBU algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#vii_-Minimizing-the-reprojection-error">vii_ Minimizing the reprojection error</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#viii_-Composite-manipulation">viii_ Composite manipulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ix_-plot-axis-on-composite">ix_ plot axis on composite</a></li>
 </ul>
 </li>
 </ul>
@@ -572,7 +575,7 @@ document.write(`
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;pycopo.calibration.ImageBatchCalibration at 0x7faa5c3bc9a0&gt;
+&lt;pycopo.calibration.ImageBatchCalibration at 0x7eff18640250&gt;
 </pre></div></div>
 </div>
 </section>
@@ -599,7 +602,7 @@ document.write(`
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Estimating pose on detect id_detect: 1004: 100%|██████████| 1005/1005 [00:13&lt;00:00, 74.27it/s]
+Estimating pose on detect id_detect: 1004: 100%|██████████| 1005/1005 [00:14&lt;00:00, 68.31it/s]
 </pre></div></div>
 </div>
 <blockquote>
@@ -639,7 +642,7 @@ Estimating pose on detect id_detect: 1004: 100%|██████████| 
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.image.AxesImage at 0x7faa23412a90&gt;
+&lt;matplotlib.image.AxesImage at 0x7efedf691a00&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -656,14 +659,22 @@ Estimating pose on detect id_detect: 1004: 100%|██████████| 
 <blockquote>
 <div><p>If we want to visualize our raw marker/image detection data, we end-up with this graph:</p>
 </div></blockquote>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">batch</span><span class="o">.</span><span class="n">merge_all</span><span class="p">()</span>
-<span class="n">MG</span> <span class="o">=</span> <span class="n">pcp</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">get_multigraph</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">pcp</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<span class="n">batch</span><span class="o">.</span><span class="n">multigraph</span>  <span class="o">=</span> <span class="n">pcp</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">get_multigraph</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<span class="n">batch</span><span class="o">.</span><span class="n">graph</span>  <span class="o">=</span> <span class="n">pcp</span><span class="o">.</span><span class="n">utils</span><span class="o">.</span><span class="n">get_graph</span><span class="p">(</span><span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+<span class="n">batch</span><span class="o">.</span><span class="n">plot_graph</span><span class="p">()</span>
 </pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<img alt="_images/tutorial_28_0.png" src="_images/tutorial_28_0.png" />
 </div>
 </div>
 <blockquote>
@@ -699,7 +710,7 @@ Estimating pose on detect id_detect: 1004: 100%|██████████| 
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Working on cycle: (&#39;m189&#39;, &#39;i115&#39;, &#39;m188&#39;, &#39;i114&#39;): 100%|██████████| 680/680 [00:23&lt;00:00, 28.53it/s]
+Working on cycle: (&#39;m189&#39;, &#39;i115&#39;, &#39;m188&#39;, &#39;i114&#39;): 100%|██████████| 680/680 [00:24&lt;00:00, 28.08it/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -721,7 +732,7 @@ ambigus data    = 114 poses
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Working on cycle: (&#39;m193&#39;, &#39;i113&#39;, &#39;m204&#39;, &#39;i112&#39;): 100%|██████████| 308/308 [00:08&lt;00:00, 36.85it/s]
+Working on cycle: (&#39;m193&#39;, &#39;i113&#39;, &#39;m204&#39;, &#39;i112&#39;): 100%|██████████| 308/308 [00:09&lt;00:00, 31.13it/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -750,20 +761,27 @@ ambigus data    = 10 poses
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">batch</span><span class="o">.</span><span class="n">graph_calibration</span><span class="p">()</span>
+
+<span class="n">batch</span><span class="o">.</span><span class="n">plot_graph</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
-</pre></div>
+<div class="prompt empty docutils container">
 </div>
 <div class="output_area docutils container">
-<div class="highlight"><pre>
-(&lt;Pycopo Composite Marker w. 20 markers&gt;, &lt;Pycopo Pose batch w. 90 entries&gt;)
-</pre></div></div>
+<img alt="_images/tutorial_34_0.png" src="_images/tutorial_34_0.png" />
+</div>
 </div>
 <blockquote>
 <div><p><em>green nodes: non-central marker poses | red nodes: image | blue nodes: central marker poses</em></p>
+</div></blockquote>
+</section>
+<hr class="docutils" />
+<section id="vii_-Minimizing-the-reprojection-error">
+<h2>vii_ Minimizing the reprojection error<a class="headerlink" href="#vii_-Minimizing-the-reprojection-error" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>If you don’t know what this step stands for, refer to the pycopo theory <a class="reference internal" href="pycopo_theory.html"><span class="doc">corresponding section</span></a>. The goal here is to optimize the transformation matrix that allows us to go from the marker detected to the reference marker. <strong>(marker detected -&gt; reference marker)</strong>.</p>
 </div></blockquote>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -774,6 +792,13 @@ ambigus data    = 10 poses
 </pre></div>
 </div>
 </div>
+</section>
+<hr class="docutils" />
+<section id="viii_-Composite-manipulation">
+<h2>viii_ Composite manipulation<a class="headerlink" href="#viii_-Composite-manipulation" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>Once the composite calibrated, we can manipulate it as illustrated with <code class="docutils literal notranslate"><span class="pre">set_marker_reference()</span></code> function that change the reference marker of our composite by the one specified in argument:</p>
+</div></blockquote>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
 </pre></div>
@@ -783,6 +808,9 @@ ambigus data    = 10 poses
 </pre></div>
 </div>
 </div>
+<blockquote>
+<div><p>We save the composite data in <code class="docutils literal notranslate"><span class="pre">.json</span></code> file in order to be reused in other class instance as we’re going to do in the following cells.</p>
+</div></blockquote>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
@@ -797,6 +825,13 @@ ambigus data    = 10 poses
 </pre></div>
 </div>
 </div>
+</section>
+<hr class="docutils" />
+<section id="ix_-plot-axis-on-composite">
+<h2>ix_ plot axis on composite<a class="headerlink" href="#ix_-plot-axis-on-composite" title="Permalink to this heading">#</a></h2>
+<blockquote>
+<div><p>In this last part from our tutorial, we are going to plot 3 orthogonals axis on the marker reference from the composite calibrated just above. We first initialize an ImageBatchCompositePose class instance called batch_compo with the composite.json file as argument.</p>
+</div></blockquote>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
@@ -807,7 +842,6 @@ ambigus data    = 10 poses
     <span class="n">output_directory</span><span class="o">=</span><span class="s2">&quot;./_outputs_composite_pose/&quot;</span><span class="p">,</span>
     <span class="n">camera_matrix</span><span class="o">=</span><span class="n">camera_matrix</span><span class="p">,</span>
     <span class="n">distortion_coefficients</span><span class="o">=</span><span class="n">distortion_coefficients</span><span class="p">,</span>
-    <span class="c1"># directory =&quot;./_dataset_composite_pose/&quot;,</span>
     <span class="n">directory</span> <span class="o">=</span> <span class="n">image_directory</span><span class="p">,</span>
     <span class="n">composites</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;my_compo&quot;</span><span class="p">:</span><span class="n">compo</span><span class="p">}</span>
 <span class="p">)</span>
@@ -823,7 +857,7 @@ ambigus data    = 10 poses
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Estimating composite pose on image: 115: 100%|██████████| 116/116 [00:03&lt;00:00, 36.00it/s]
+Estimating composite pose on image: 115: 100%|██████████| 116/116 [00:03&lt;00:00, 32.22it/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -832,9 +866,12 @@ Estimating composite pose on image: 115: 100%|██████████| 11
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;pycopo.calibration.ImageBatchCompositePose at 0x7faa217a1970&gt;
+&lt;pycopo.calibration.ImageBatchCompositePose at 0x7efedd9e26a0&gt;
 </pre></div></div>
 </div>
+<blockquote>
+<div><p>Once our image dataset studied and the pose of the composite estimated, we can now call <code class="docutils literal notranslate"><span class="pre">draw_xyz_composite()</span></code> function that draws axis on marker reference.</p>
+</div></blockquote>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
 </pre></div>
@@ -856,7 +893,7 @@ Drawing markers...
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|██████████| 116/116 [01:26&lt;00:00,  1.34it/s]
+100%|██████████| 116/116 [01:14&lt;00:00,  1.55it/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -872,7 +909,7 @@ Drawing markers done
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Drawing axis markers on: img_0115.tif: 100%|██████████| 116/116 [01:27&lt;00:00,  1.32it/s]
+Drawing axis markers on: img_0115.tif: 100%|██████████| 116/116 [01:31&lt;00:00,  1.27it/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -881,9 +918,12 @@ Drawing axis markers on: img_0115.tif: 100%|██████████| 116/
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;pycopo.calibration.ImageBatchCompositePose at 0x7faa217a1970&gt;
+&lt;pycopo.calibration.ImageBatchCompositePose at 0x7efedd9e26a0&gt;
 </pre></div></div>
 </div>
+<blockquote>
+<div><p>Let’s have a look on our resulting data:</p>
+</div></blockquote>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
@@ -892,14 +932,14 @@ Drawing axis markers on: img_0115.tif: 100%|██████████| 116/
 <span class="n">files</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="n">target_dir</span><span class="p">)</span>
 <span class="n">no_gif</span> <span class="o">=</span> <span class="kc">True</span>
 <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-    <span class="k">if</span> <span class="n">file</span> <span class="o">==</span> <span class="s2">&quot;axis_on_image.gif&quot;</span><span class="p">:</span>  <span class="c1"># Change the file extensions to match your image format</span>
+    <span class="k">if</span> <span class="n">file</span> <span class="o">==</span> <span class="s2">&quot;axis_on_image.gif&quot;</span><span class="p">:</span>
         <span class="n">no_gif</span> <span class="o">=</span> <span class="kc">False</span>
 <span class="k">if</span> <span class="n">no_gif</span><span class="p">:</span>
     <span class="n">img</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="nb">dir</span> <span class="o">=</span> <span class="s2">&quot;./_outputs_composite_pose/&quot;</span>
     <span class="n">files</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">([</span><span class="n">file</span> <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">listdir</span><span class="p">(</span><span class="nb">dir</span><span class="p">)</span> <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.jpg&quot;</span><span class="p">)],</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="nb">int</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;_&quot;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]))</span>
     <span class="k">for</span> <span class="n">file</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.jpg&quot;</span><span class="p">):</span>  <span class="c1"># Change the file extensions to match your image format</span>
+        <span class="k">if</span> <span class="n">file</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.jpg&quot;</span><span class="p">):</span>
             <span class="n">file_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="nb">dir</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
             <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">file_path</span><span class="p">)</span>
             <span class="n">width</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="n">im</span><span class="o">.</span><span class="n">size</span>
@@ -954,6 +994,9 @@ Drawing axis markers on: img_0115.tif: 100%|██████████| 116/
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iv_-marker-detection-et-pose-estimation">iv_ marker detection et pose estimation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#v_-graph-creation">v_ graph creation</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vi_-GBU-algorithm">vi_ GBU algorithm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vii_-Minimizing-the-reprojection-error">vii_ Minimizing the reprojection error</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#viii_-Composite-manipulation">viii_ Composite manipulation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ix_-plot-axis-on-composite">ix_ plot axis on composite</a></li>
 </ul>
   </nav></div>
 
