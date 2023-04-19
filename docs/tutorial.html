@@ -575,7 +575,7 @@ document.write(`
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;pycopo.calibration.ImageBatchCalibration at 0x7eff18640250&gt;
+&lt;pycopo.calibration.ImageBatchCalibration at 0x7f8d5ae28550&gt;
 </pre></div></div>
 </div>
 </section>
@@ -602,7 +602,7 @@ document.write(`
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Estimating pose on detect id_detect: 1004: 100%|██████████| 1005/1005 [00:14&lt;00:00, 68.31it/s]
+Estimating pose on detect id_detect: 1004: 100%|██████████| 1005/1005 [00:14&lt;00:00, 70.77it/s]
 </pre></div></div>
 </div>
 <blockquote>
@@ -642,7 +642,7 @@ Estimating pose on detect id_detect: 1004: 100%|██████████| 
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.image.AxesImage at 0x7efedf691a00&gt;
+&lt;matplotlib.image.AxesImage at 0x7f8d599b1c10&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -678,7 +678,7 @@ Estimating pose on detect id_detect: 1004: 100%|██████████| 
 </div>
 </div>
 <blockquote>
-<div><p><em>blue nodes: marker poses | red nodes: image</em></p>
+<div><p><em>blue nodes: markers | green nodes: images</em></p>
 </div></blockquote>
 </section>
 <hr class="docutils" />
@@ -710,7 +710,7 @@ Estimating pose on detect id_detect: 1004: 100%|██████████| 
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Working on cycle: (&#39;m189&#39;, &#39;i115&#39;, &#39;m188&#39;, &#39;i114&#39;): 100%|██████████| 680/680 [00:24&lt;00:00, 28.08it/s]
+Working on cycle: (&#39;m189&#39;, &#39;i115&#39;, &#39;m188&#39;, &#39;i114&#39;): 100%|██████████| 680/680 [00:22&lt;00:00, 30.47it/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -732,7 +732,7 @@ ambigus data    = 114 poses
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Working on cycle: (&#39;m193&#39;, &#39;i113&#39;, &#39;m204&#39;, &#39;i112&#39;): 100%|██████████| 308/308 [00:09&lt;00:00, 31.13it/s]
+Working on cycle: (&#39;m193&#39;, &#39;i113&#39;, &#39;m204&#39;, &#39;i112&#39;): 100%|██████████| 308/308 [00:08&lt;00:00, 36.51it/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -774,7 +774,7 @@ ambigus data    = 10 poses
 </div>
 </div>
 <blockquote>
-<div><p><em>green nodes: non-central marker poses | red nodes: image | blue nodes: central marker poses</em></p>
+<div><p><em>blue nodes: markers | green nodes: images</em></p>
 </div></blockquote>
 </section>
 <hr class="docutils" />
@@ -787,8 +787,8 @@ ambigus data    = 10 poses
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#batch.optimize_calibration()</span>
-<span class="c1">#batch.plot_reprojection_errors()</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># batch.optimize_calibration()</span>
+<span class="c1"># batch.plot_reprojection_errors()</span>
 </pre></div>
 </div>
 </div>
@@ -857,7 +857,7 @@ ambigus data    = 10 poses
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Estimating composite pose on image: 115: 100%|██████████| 116/116 [00:03&lt;00:00, 32.22it/s]
+Estimating composite pose on image: 115: 100%|██████████| 116/116 [00:03&lt;00:00, 37.45it/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -866,7 +866,7 @@ Estimating composite pose on image: 115: 100%|██████████| 11
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;pycopo.calibration.ImageBatchCompositePose at 0x7efedd9e26a0&gt;
+&lt;pycopo.calibration.ImageBatchCompositePose at 0x7f8d52979880&gt;
 </pre></div></div>
 </div>
 <blockquote>
@@ -893,7 +893,7 @@ Drawing markers...
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-100%|██████████| 116/116 [01:14&lt;00:00,  1.55it/s]
+100%|██████████| 116/116 [01:14&lt;00:00,  1.56it/s]
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -909,7 +909,7 @@ Drawing markers done
 </div>
 <div class="output_area stderr docutils container">
 <div class="highlight"><pre>
-Drawing axis markers on: img_0115.tif: 100%|██████████| 116/116 [01:31&lt;00:00,  1.27it/s]
+Drawing axis markers on: img_0115.tif: 100%|██████████| 116/116 [01:27&lt;00:00,  1.33it/s]
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -918,7 +918,7 @@ Drawing axis markers on: img_0115.tif: 100%|██████████| 116/
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;pycopo.calibration.ImageBatchCompositePose at 0x7efedd9e26a0&gt;
+&lt;pycopo.calibration.ImageBatchCompositePose at 0x7f8d52979880&gt;
 </pre></div></div>
 </div>
 <blockquote>
