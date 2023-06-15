@@ -28,12 +28,3 @@ The pycopo module is execectubale in docker container because of it specific env
 
 .. note::
     *You can also open the git in a devcontainer using vscode.*
-
-
-.. testcode::
-    
-    2+2
-
-.. testoutput::
-
-    5
