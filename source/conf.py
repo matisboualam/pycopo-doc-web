@@ -57,7 +57,7 @@ exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 # a list of builtin themes.
 #
 html_theme = "pydata_sphinx_theme"
-html_logo = "https://gitlab.com/uploads/-/system/project/avatar/15363012/6x6_1000-12.jpeg?width=64"
+html_logo = "../docs/_images/pycopo-logo.png"
 html_favicon = "https://gitlab.com/uploads/-/system/project/avatar/15363012/6x6_1000-12.jpeg?width=64"
 html_sidebars = {
     "**": ["globaltoc.html", "sourcelink.html", "searchbox.html"],
